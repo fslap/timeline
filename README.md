@@ -26,16 +26,18 @@ A drop-in pastebin-style timeline editor with dual-sided vertical layout, PGP en
 ## Access Points
 
 - `/l/<username>` - View timeline
-- `/<directory>/` - Editor & publisher (configurable)
-- `DELETE` - Remove timeline
+- `/edit/<username>` - Editor & publisher
+- `/publish` - Publish timeline (POST)
+- `/edit/delete/<username>` - Delete timeline
 - No-JS fallback available
 
 ## Installation
 
-1. Install dependencies: `composer install`
-2. Run migrations: `vendor/bin/phinx migrate`
-3. Configure `.env` with database & PGP settings
-4. Start server: `php -S localhost:8000`
+1. Create `.env` from `.env.example`
+2. Install dependencies: `composer install`
+3. Configure database in `.env`
+4. Run migrations: `vendor/bin/phinx migrate`
+5. Start server: `php -S localhost:8000 -t public`
 
 ## Documentation
 
